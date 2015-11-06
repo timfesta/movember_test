@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
  
- root 'statics#index'
+  get 'profile' => 'users#show'
+
+  get 'signup' => 'users#new'
+
+  resources :users
+
+  root 'statics#index'
+
+
 end
