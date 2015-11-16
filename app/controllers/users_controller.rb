@@ -1,17 +1,20 @@
 class UsersController < ApplicationController
 
 	def show
-		@users = User.find(params[:id])
+		@current_user = User.find(session[:user_id])
+		# `
 	end
 
 	def new
-		@users = User.new
+		@user = User.new
 	end
 
 	def create
-		@users = User.new(user_params)
-		if @users.save
-			redirect_to @users
+		user = User.new(user_params)
+		if user.save
+			# redirect_to @users
+			session[:user_id] = user.id
+			redirect_to profile_path
 		else
 			render 'new'
 		end
