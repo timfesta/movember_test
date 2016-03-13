@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.navbar {
+	margin-bottom: 0;
+}
+
+.jumbotron {
+	background-image: url('northbeach.png');
+	height: 400px;
+	width: 100%;
+	background-repeat: no-repeat;
+}

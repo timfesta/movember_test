@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   def current_user
   	@current_user ||= User.find(session[:user_id]) if session[:user_id]
-  		redirect_to profile_path
   end
 
   helper_method :current_user
@@ -15,5 +14,11 @@ class ApplicationController < ActionController::Base
   		redirect_to login_path
   	end	
   end
+
+  def logged_in?
+    @current_user != nil
+  end
+
+  helper_method :logged_in?
 
 end
