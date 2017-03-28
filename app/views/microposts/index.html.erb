@@ -1,3 +1,5 @@
 <ol class="microposts">
-  <%= render @microposts %>
+  <%= @microposts.each do |micropost|%>
+  	<%= microposts.content %>
+  <% end %>
 </ol>

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
   resources :sessions
 
+  resources :microposts
+
   root 'statics#index'
 
 

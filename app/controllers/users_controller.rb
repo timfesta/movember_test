@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+	def index
+		@user = User.all	
+	end
+
 	def new
 		if current_user
 			redirect_to profile_path
