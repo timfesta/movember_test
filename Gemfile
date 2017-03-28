@@ -24,6 +24,7 @@ gem 'aws-sdk'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
 
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
